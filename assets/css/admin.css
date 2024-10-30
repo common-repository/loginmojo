@@ -1,0 +1,292 @@
+#login-mojo-form {
+  display: inline-block;
+  margin: 10px 0px 0px;
+  width: 100%;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+#login-mojo-form.hide {
+  display: none;
+  opacity: 0;
+}
+#login-mojo-form .separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0px;
+}
+#login-mojo-form .separator::before,
+#login-mojo-form .separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #999;
+}
+#login-mojo-form .separator:not(:empty)::before {
+  margin-right: 0.25em;
+}
+#login-mojo-form .separator:not(:empty)::after {
+  margin-left: 0.25em;
+}
+#login-mojo-form .login-mojo-button {
+  background-color: #2e3749;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #306108;
+  font-size: 14px;
+  text-decoration: none;
+  border: none;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  cursor: pointer;
+
+  /*
+    text-align:center;
+    left: 50%;
+    position: absolute;
+    -ms-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    */
+  margin: 0 auto;
+}
+#login-mojo-form .login-mojo-button:hover,
+#login-mojo-form .login-mojo-button:focus {
+  background-color: #2e3749;
+  cursor: pointer;
+}
+#login-mojo-form .login-mojo-button label {
+  color: #fff;
+  margin: 0px;
+  padding: 10px 5px;
+  font-weight: normal;
+  display: block;
+  width: 100%;
+}
+#login-mojo-form .loading-animate {
+  height: 2em;
+  padding: 0.25em;
+  width: 2em;
+  display: none;
+  position: relative;
+  -webkit-animation: rotate 1.5s linear infinite;
+  animation: rotate 1.5s linear infinite;
+}
+#login-mojo-form .loading-animate :after,
+#login-mojo-form .loading-animate:before {
+  content: "";
+  display: block;
+}
+#login-mojo-form .loading-animate:before {
+  border-color: transparent white white white;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 0.2em;
+  height: 1.5em;
+  width: 1.5em;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#login-mojo-form #login-mojo-result {
+  display: none;
+  margin: 0 0 7px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#login-mojo-form .login-mojo-message {
+  display: none;
+  font-size: 12px;
+  padding: 8px 10px;
+}
+#login-mojo-form .login-mojo-message.show {
+  display: inline-block;
+}
+#login-mojo-form .login-mojo-message.success {
+  background-color: rgba(87, 241, 45, 0.24);
+  border: 1px solid #16c900;
+  color: #0f8500;
+}
+#login-mojo-form .login-mojo-message.processing {
+  background-color: rgb(33 150 243 / 7%);
+  border: 1px solid #03a9f4;
+  color: #2196f3;
+}
+#login-mojo-form .login-mojo-message.error {
+  background-color: rgba(255, 0, 0, 0.24);
+  border: 1px solid #b36262;
+  color: #820000;
+}
+#login-mojo-form .login-mojo-message-success,
+#login-mojo-form .login-mojo-message-error.show {
+  display: inline-block;
+}
+
+.loginmojo-error-notice {
+  background-color: #ffd5d5;
+  padding: 7px 7px;
+  display: inline-block;
+  border: 1px solid #ffb7b7;
+  border-radius: 2px;
+  color: #e02222;
+}
+
+.loginmojo-time {
+  clear: both;
+  color: #a4a2a2;
+  display: block;
+  font-size: 10px;
+}
+.loginmojo-color-green {
+  color: #27bb00;
+}
+.loginmojo-color-red {
+  color: #f10000;
+}
+
+.loginmojo-button-group .dashicons {
+  vertical-align: text-top;
+}
+
+#loginmojo-select-subscriber-group {
+  display: none;
+}
+
+#loginmojo-custom-text {
+  display: none;
+}
+
+#loginmojo-custom-text textarea {
+  font-size: 12px;
+  width: 100%;
+  height: 114px;
+}
+#loginmojo-custom-text p.description.data,
+#loginmojo-custom-text code {
+  font-size: 11px !important;
+}
+.loginmojo-plugin-meta-link span {
+  font-size: 14px;
+  vertical-align: sub;
+}
+.loginmojo-tab-group {
+  border: 1px solid #d8d8d8;
+  display: block;
+  width: 100%;
+  float: left;
+  background-color: #ffffff;
+  margin-top: 18px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.loginmojo-logo-group {
+  background-color: #999999;
+  color: #fff;
+  border-radius: 3px;
+}
+.loginmojo-tab {
+  margin-top: 2px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 1px;
+  width: 190px;
+  float: left;
+}
+.loginmojo-tab li {
+  margin: 0;
+}
+.loginmojo-tab li a:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+.loginmojo-tab #loginmojo-logo {
+  text-align: center;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 10px;
+}
+.loginmojo-tab #loginmojo-logo .image-box {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 8px 8px 4px;
+}
+.loginmojo-tab #loginmojo-logo img {
+  width: 100%;
+}
+.loginmojo-tab li a {
+  display: block;
+  text-decoration: none;
+  padding: 13px 14px;
+  font-weight: bold;
+  margin: 0 -1px 0px 0;
+}
+
+.loginmojo-tab li .active {
+  background-color: #f4f6ff;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  border-right: 1px solid #f4f6ff;
+}
+
+.loginmojo-tab-content {
+  background-color: #f4f6ff;
+  display: grid;
+  padding: 6px 33px;
+  border-left: 1px solid #d8d8d8;
+  min-height: 680px;
+}
+
+.rtl .loginmojo-tab {
+  float: right;
+}
+
+.rtl .loginmojo-tab-content {
+  border-left: 0px none;
+  border-right: 1px solid #d8d8d8;
+}
+
+.rtl .loginmojo-tab li a {
+  margin: 0 0 0 -1px;
+}
+.rtl .loginmojo-tab li .active {
+}
+.login-mojo-button:after {
+  background: url("../images/favicon.png") no-repeat scroll center center / 100%
+    auto rgba(0, 0, 0, 0);
+  content: "";
+  display: inline-block;
+  color: #fff;
+  height: 30px;
+  margin-right: 13px;
+  position: relative;
+  vertical-align: middle;
+  width: 30px;
+}
